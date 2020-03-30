@@ -1,0 +1,89 @@
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+  <button style="text-align:right;" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+  <a href="steps/steps-ko.html" class="w3-bar-item w3-button">개설과목</a>
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+    졸업사정 기준 <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="standard" class="w3-hide w3-white w3-card">
+    <a href="standard/standard-1-ko.html" class="w3-bar-item w3-button">- 주전공_신입학</a>
+    <a href="standard/standard-2-ko.html" class="w3-bar-item w3-button">- 주전공_전과생</a>
+    <a href="standard/standard-3-ko.html" class="w3-bar-item w3-button">- 주전공_편입학</a>
+    <a href="standard/standard-4-ko.html" class="w3-bar-item w3-button">- 복수전공</a>
+  </div>
+  <a href="test/test-ko.html" class="w3-bar-item w3-button">졸업시험</a>
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc2()">
+    졸업요건 <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="etc" class="w3-hide w3-white w3-card">
+    <a href="etc/etc-1-ko.html" class="w3-bar-item w3-button">- 졸업인정제</a>
+    <a href="etc/etc-2-ko.html" class="w3-bar-item w3-button">- 다전공/부전공</a>
+    <a href="etc/etc-3-ko.html" class="w3-bar-item w3-button">- 교양과목</a>
+    <a href="etc/etc-4-ko.html" class="w3-bar-item w3-button">- 수료/유예</a>
+    <a href="etc/etc-5-ko.html" class="w3-bar-item w3-button">- 교직이수</a>
+  </div>
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc3()">
+    주요사이트 <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="relsite" class="w3-hide w3-white w3-card">
+    <a href="https://www.cau.ac.kr/index.do" target="_blank" class="w3-bar-item w3-button">- 중앙대학교</a>
+    <a href="https://mportal.cau.ac.kr/main.do" target="_blank" class="w3-bar-item w3-button">- 중앙대포탈</a>
+    <a href="https://society.cau.ac.kr/" target="_blank" class="w3-bar-item w3-button">- 사회과학대학</a>
+    <a href="https://psyche.cau.ac.kr/" target="_blank" class="w3-bar-item w3-button">- 심리학과</a>
+    <a href="https://ge.cau.ac.kr/index.php" target="_blank" class="w3-bar-item w3-button">- 다빈치교양대학</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<button class="w3-button w3-white w3-xxlarge" onclick="w3_open()" id="sidebartab">&#9776;</button>
+<h1 id="maintitle"><strong>CAU PSYCHE READY 4 GRAD</strong></h1>
+
+<script>
+  function myAccFunc() {
+    var x = document.getElementById("standard");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      x.previousElementSibling.className += " w3-green";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+      x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+  }
+
+  function myAccFunc2() {
+    var x = document.getElementById("etc");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      x.previousElementSibling.className += " w3-green";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+      x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+  }
+
+  function myAccFunc3() {
+    var x = document.getElementById("relsite");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      x.previousElementSibling.className += " w3-green";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+      x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+  }
+
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+  }
+
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+  }
+</script>
