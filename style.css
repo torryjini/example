@@ -39,7 +39,7 @@ select {
 
 #mySidebar {
   overflow-y: scroll;
-  font-size: 2rem;
+  font-size: 1.3rem;
   /* Add the ability to scroll */
 }
 
