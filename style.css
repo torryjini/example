@@ -42,6 +42,10 @@ select {
   /* Add the ability to scroll */
 }
 
+#sidebartab {
+  font-size: 2rem;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 #mySidebar::-webkit-scrollbar {
   display: none;
@@ -57,7 +61,7 @@ select {
   padding-top: 0;
   padding-bottom: 1rem;
   border-bottom: solid 0.2rem;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-top: 0;
 }
 
