@@ -52,7 +52,7 @@ select {
 
 #sidebartab {
   font-size: 1.3rem;
-  padding-top: 0;
+  padding-top: 0.3rem;
   padding-bottom: 0;
   position: absolute;
   z-index: 3;
@@ -73,7 +73,7 @@ select {
   padding-top: 0.3rem;
   padding-bottom: 0.7rem;
   border-bottom: solid 0.2rem;
-  font-size: 3rem;
+  font-size: 2.7rem;
   margin-top: 0;
   font-family: 'Poiret One', cursive;
 }
