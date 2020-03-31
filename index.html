@@ -2,8 +2,20 @@
 <html lang="en" dir="ltr">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156322141-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-156322141-2');
+  </script>
   <meta charset="utf-8">
-  <title>CAU READY 4 GRAD</title>
+  <title>CAU PSYCHE READY 4 GRAD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,7 +25,7 @@
 
 <body>
   <div w3-include-html="title&menu.html"></div>
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
   <div class="w3-container">
     <h2>중앙대학교 심리학과<br>졸업 준비를 위한 페이지입니다.<br>(v.2020.02)</h2>
     <div id="indexlangbox">
@@ -22,19 +34,18 @@
         <option value="index-zh-CN.html">中文</option>
       </select>
     </div>
-    <p>
-
-      <img src="psyche_logo.png"><br>
-      <br>
-      심리학과 개설과목과 졸업사정 기준표, 체크리스트를 확인하시고 졸업에 참고하시기 바랍니다.<br>
-      <br>
-      정확한 사항은 반드시 심리학과 사무실에 아래 연락처 또는 이메일로 문의하시기 바랍니다.
-      <br><br>
-      졸업 및 학사 정보, 일정 등은 주요사이트들을 수시로 방문하셔서 확인하시기를 권합니다.
-    </p>
+      <img src="psyche_logo.png" style="width:20rem; height:20rem;"><br>
+      <span id="developer-info" style="text-align:center;">
+        <h4 style="margin:0;padding:5px;">개발자 정보</h4>
+        <address>
+          개발 : 김명진(13학번 졸업<br>2019-2021 심리학과 행정인턴)<br>
+          번역 : 박경화(대학원 심리학과 19학번)<br>
+          수정/오류 건의 : torryjini@naver.com
+        </address>
+      </span>
     <button type="button"><a href="#sidebartab">▲top</a></button>
   </div>
-
+  <div w3-include-html="information.html"></div>
   <script>
     w3.includeHTML();
   </script>
