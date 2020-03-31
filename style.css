@@ -74,6 +74,27 @@ select {
   font-family: 'Poiret One', cursive;
 }
 
+#TopBtn {
+  display: none;
+  position: fixed;
+  bottom: 1rem;
+  right: 1.5rem;
+  z-index: 99;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  opacity: 30%;
+}
+
+#TopBtn:hover {
+  background-color: #555;
+}
+
 #information {
   position: relative;
   bottom: 0;
