@@ -70,8 +70,8 @@ select {
 
 #maintitle {
   text-align: center;
-  padding-top: 0;
-  padding-bottom: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.7rem;
   border-bottom: solid 0.2rem;
   font-size: 3rem;
   margin-top: 0;
