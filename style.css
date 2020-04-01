@@ -37,9 +37,10 @@ select {
 }
 }
 
-.langbox {
+#langbox {
   margin-top: 20px;
   text-align: right;
+  justify-content: center;
 }
 
 #content-info {
