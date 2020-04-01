@@ -38,6 +38,15 @@ select {
   text-align: right;
 }
 
+#content-info {
+  text-align: left;
+}
+
+#page-info {
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+
 #standard, #etc, #relsite {
   font-size: 1.1rem;
 }
