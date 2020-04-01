@@ -39,7 +39,7 @@ select {
 
 .langbox {
   margin-top: 20px;
-  align: center;
+  text-align: right;
 }
 
 #content-info {
