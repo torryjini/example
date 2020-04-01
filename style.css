@@ -36,11 +36,6 @@ select {
   margin-right: 15%;
 }
 
-#langbox {
-  text-align: right;
-  justify-content: center;
-}
-
 #content-info {
   text-align: left;
 }
@@ -48,6 +43,11 @@ select {
 #page-info {
   display: grid;
   grid-template-columns: 75% 25%;
+}
+
+#langbox {
+  text-align: right;
+  justify-content: center;
 }
 
 #standard, #etc, #relsite {
