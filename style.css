@@ -31,6 +31,10 @@ select {
   text-align: center;
   justify-content: center;
   font-family: 'Noto Sans KR', sans-serif;
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
 }
 
 .langbox {
