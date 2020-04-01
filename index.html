@@ -16,7 +16,7 @@
   </script>
   <meta charset="utf-8">
   <title>CAU PSYCHE READY 4 GRAD</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, height=device-height ,initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
@@ -49,35 +49,10 @@
       </address>
     </span>
   </div>
-  <button onclick="topFunction()" id="TopBtn" title="Go to top">Top</button>
-  <script>
-    //Get the button
-    var mybutton = document.getElementById("TopBtn");
-
-    // When the user scrolls down 10px from the top of the document, show the button
-    window.onscroll = function() {
-      scrollFunction()
-    };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
   <div w3-include-html="information.html"></div>
   <script>
     w3.includeHTML();
   </script>
-
 </body>
 
 </html>
