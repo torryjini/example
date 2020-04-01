@@ -48,6 +48,7 @@ select {
 #langbox {
   text-align: right;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 #standard, #etc, #relsite {
