@@ -52,6 +52,10 @@ select {
   grid-template-columns: 75% 25%;
 }
 
+#page-info > h2 {
+  font-size: 1rem;
+}
+
 #langbox {
   text-align: right;
   justify-content: center;
