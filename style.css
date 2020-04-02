@@ -36,7 +36,7 @@ select {
   margin-right: 15%;
 }
 
-@media(max-width:1440px) {
+@media all and (orientation:portrait) {
       .w3-container  {
           margin-left: 0;
           margin-right: 0;
