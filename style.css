@@ -37,6 +37,10 @@ select {
 }
 
 @media all and (orientation:portrait) {
+      table {
+        margin-left: 0;
+        margin-right: 0;
+      }
       .w3-container  {
           margin-left: 0;
           margin-right: 0;
