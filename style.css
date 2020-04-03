@@ -15,6 +15,7 @@ ul, li {
 
 table {
   margin: auto;
+  border: solid;
 }
 
 th, td {
@@ -120,7 +121,7 @@ select {
   cursor: pointer;
   padding: 0.8rem;
   border-radius: 0.5rem;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 #TopBtn:hover {
