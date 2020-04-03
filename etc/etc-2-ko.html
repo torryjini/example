@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -14,22 +14,34 @@
 
     gtag('config', 'UA-156322141-2');
   </script>
-  <title>중앙대심리학과 졸업준비</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
+  <title>CAU PSYCHE READY 4 GRAD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 </head>
 <script src="https://www.w3schools.com/lib/w3.js"></script>
 
 <body>
-  <div w3-include-html="navigation.html"></div>
-  <div class="maincontent">
+  <header>
+    <div w3-include-html="../title&menu.html"></div>
+    <button onclick="topFunction()" id="TopBtn" title="Go to top">Top</button>
+    <script type="text/javascript" src="../script.js"></script>
+    <a href="../index.html" style="text-decoration:none; color:black;">
+      <h1 id="maintitle"><strong>CAU PSYCHE<br>READY 4 GRAD</strong></h1>
+    </a>
+  </header>
+  <div class="w3-container">
     <div id="content-info">
       <div id="page-info">
         <h2>졸업요건 > 다전공/부전공</h2>
-        <div class="langbox">
+        <div id="langbox">
           Language : <select class="lang-selector" onchange="location = this.value">
-            <option value="5etc-2.html">한국어</option>
-            <option value="5etc-2-zh-CN.html">中文</option>
+            <option value="etc-2.html">한국어</option>
+            <option value="etc-2-zh-CN.html">中文</option>
           </select>
         </div>
       </div>
@@ -113,12 +125,9 @@
         <td>이 7과목 중<br><strong>전공필수<br>2과목 이상</strong> 수강</td>
       </tr>
     </table><br>
-    <button type="button"><a href="#title">▲top</a></button>
   </div>
-  <div w3-include-html="information.html"></div>
+  <div w3-include-html="../information.html"></div>
   <script>
     w3.includeHTML();
   </script>
 </body>
-
-</html>
