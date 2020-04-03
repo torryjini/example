@@ -15,7 +15,7 @@ ul, li {
 
 table {
   margin: auto;
-  border: solid;
+  border: 1px solid black;
 }
 
 th, td {
