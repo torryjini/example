@@ -15,7 +15,8 @@ ul, li {
 
 table {
   margin: auto;
-  border : 1px solid #e6e6e6;
+  width: 100%;
+  border : 1px solid #3c36365e;
   border-collapse: collapse;
 }
 
