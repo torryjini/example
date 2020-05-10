@@ -2,11 +2,11 @@
       var x = document.getElementById("standard");
       if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-        x.previousElementSibling.className += " w3-green";
+        x.previousElementSibling.className += " #98c1fe85";
       } else {
         x.className = x.className.replace(" w3-show", "");
         x.previousElementSibling.className =
-          x.previousElementSibling.className.replace(" w3-green", "");
+          x.previousElementSibling.className.replace(" #98c1fe85", "");
       }
     }
 
@@ -14,11 +14,11 @@
       var x = document.getElementById("etc");
       if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-        x.previousElementSibling.className += " w3-green";
+        x.previousElementSibling.className += " #98c1fe85";
       } else {
         x.className = x.className.replace(" w3-show", "");
         x.previousElementSibling.className =
-          x.previousElementSibling.className.replace(" w3-green", "");
+          x.previousElementSibling.className.replace(" #98c1fe85", "");
       }
     }
 
@@ -26,11 +26,11 @@
       var x = document.getElementById("relsite");
       if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-        x.previousElementSibling.className += " w3-green";
+        x.previousElementSibling.className += " #98c1fe85";
       } else {
         x.className = x.className.replace(" w3-show", "");
         x.previousElementSibling.className =
-          x.previousElementSibling.className.replace(" w3-green", "");
+          x.previousElementSibling.className.replace(" #98c1fe85", "");
       }
     }
 
