@@ -31,19 +31,12 @@
       text-align: center;
     }
 
-    #liberalarts,
-    #major,
-    #Major_others {
+    .checklist {
       margin-left: 8rem;
       margin-right: 8rem;
     }
 
-    #liberal_buttons {
-      margin: auto;
-      text-align: center;
-    }
-
-    #major_buttons {
+    .buttons {
       margin: auto;
       text-align: center;
     }
@@ -52,7 +45,7 @@
 
 <body>
   <div id="student_info">
-    <h2>심리학과 졸업사정 체크리스트</h2>
+    <h2>심리학과 졸업 체크리스트</h2>
     <h3>주전공_신입학(2016학번 ~)</h3>
     <h4>입학년도 :
       <select id="admissionyear_selector" style="width:5.5rem;height:1.5rem;">
@@ -66,9 +59,9 @@
     </h4>
   </div>
   <div id="liberalarts">
-    <h4>사용방법 : "중앙대학교 포탈" - "~마당" - "졸업관련 성적조회"로 접속하여 본인의 학점을 해당 란에 입력하고 결과확인을 누릅니다.<br>
-    실제 졸업사정 결과와 차이가 있을 수 있으니, 본 페이지 사용 후 심리학과 사무실에 연락하여 확인하시기 바랍니다.</h4>
-    <form id="checklist_liberal">
+    <form id="checklist_liberal" class="checklist">
+      <h4>사용방법 : <a href="https://mportal.cau.ac.kr" target="_blank">"중앙대학교 포탈"</a> - "강의마당" - "졸업관련 성적조회"로 접속하여 본인의 학점을 해당 란에 입력하고 결과확인을 누릅니다.<br>
+        실제 졸업사정 결과와 차이가 있을 수 있으니, 본 페이지 사용 후 심리학과 사무실에 연락하여 확인하시기 바랍니다.</h4>
       <h4>1. 교양 영역</h4>
       <table border="solid" width="100%">
         <tr>
@@ -83,7 +76,7 @@
           <td colspan="2">0</td>
           <td></td>
           <td colspan="2">
-            <input type="text" id="elective_liveral" placeholder="숫자만 입력해주세요." value="0" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' style="width:2.9rem;height:1.2rem;"> 학점
+            <input type="text" id="elective_liveral" placeholder="숫자" value="0" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' style="width:2.9rem;height:1.2rem;"> 학점
           </td>
           <td>자율이수</td>
         </tr>
@@ -132,7 +125,7 @@
           <td rowspan="5"></td>
           <td><input type="checkbox" id="core1"> 이수</td>
           <td rowspan="5">
-            <input type="text" id="core_total" placeholder="숫자만 입력해주세요." value="0" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' style="width:2.7rem;height:1.2rem;"> 학점
+            <input type="text" id="core_total" placeholder="숫자" value="0" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' style="width:2.9rem;height:1.2rem;"> 학점
           </td>
           <td rowspan="5">각 영역당<br>1과목 이상 필수 이수</td>
         </tr>
@@ -168,22 +161,22 @@
       </table>
     </form>
   </div><br>
-  <div id="liberal_buttons">
+  <div class="buttons">
     <input type="button" value="결과확인" onclick="Liveral_result()">
     <input type="reset" value="초기화" onclick="Liveral_Reset();">
   </div>
   <br>
   <div id="major">
-    <form id="checklist_major">
+    <form id="checklist_major" class="checklist">
       <h4>2. 전공 영역_
-            <select id="MultiMajor_selector" style="width:7rem;height:1.5rem;">
-              <option value="0">-다전공 선택-</option>
-              <option value="66">전공심화</option>
-              <option value="45">복수전공</option>
-              <option value="45">설계전공</option>
-              <option value="45">연계전공</option>
-              <option value="45">융합전공</option>
-            </select></h4>
+        <select id="MultiMajor_selector" style="width:7rem;height:1.5rem;">
+          <option value="0">-다전공 선택-</option>
+          <option value="66">전공심화</option>
+          <option value="45">복수전공</option>
+          <option value="45">설계전공</option>
+          <option value="45">연계전공</option>
+          <option value="45">융합전공</option>
+        </select></h4>
       <table border="solid" width="100%">
         <tr>
           <th>구분</th>
@@ -223,72 +216,150 @@
         </tr>
         <tr>
           <th>전공과목</th>
-          <td>66 or 45<br>(전공필수 포함)</td>
+          <td>66 / 45<br>(전공필수 포함)</td>
           <td>
-            <input type="text" id="major_input" placeholder="숫자만 입력해주세요." name="major" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.7rem;height:1.2rem;"> 학점
+            <input type="text" id="major_input" placeholder="숫자" name="major" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;"> 학점
           </td>
-          <td>전공심화 : 66 학점<br>복수/설계/연계/융합 : 45 학점</td>
+          <td>전공심화 : 최소 66 학점<br>전공이수_복수/설계/연계/융합 : 최소 45 학점</td>
         </tr>
       </table>
     </form>
   </div>
   <br>
-  <div id="major_buttons">
+  <div class="buttons">
     <input type="button" value="결과확인" onclick="Major_result();">
     <input type="reset" value="초기화" onclick="Major_Reset();">
   </div><br>
 
 
-  <div id="Major_others">
+  <div id="Major_others" class="checklist">
     <form id="checklist_major_others">
       <h4>3. 다전공/부전공/자유선택/기타 영역</h4>
-    <table border="solid" width="100%">
-      <tr>
-        <th colspan="2">구분</th>
-        <th>최소이수학점</th>
-        <th>이수학점</th>
-        <th>이수기준</th>
-      </tr>
-      <tr>
-        <th rowspan="2">다전공</th>
-        <th>복수전공</th>
-        <td>45</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th>설계/연계/융합</th>
-        <td>36</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th colspan="2">부전공</th>
-        <td>21</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th colspan="2">자유선택</th>
-        <td>1</td>
-        <td></td>
-        <td>CAU세미나 1학점 필수이수</td>
-      </tr>
-      <tr>
-        <th colspan="2">교직</th>
-        <td>22</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th colspan="2">군사학</th>
-        <td>0</td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
-  </form>
+      <table border="solid" width="100%">
+        <tr>
+          <th colspan="2">구분</th>
+          <th>최소이수학점</th>
+          <th colspan="3">이수학점</th>
+          <th>이수기준</th>
+        </tr>
+        <tr>
+          <th rowspan="4">다전공</th>
+          <th>복수전공</th>
+          <td>45</td>
+          <td colspan="3">
+            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;"> 학점
+          </td>
+          <td>복수전공 전공기초는 자유선택으로 인정<br>복수전공을 교직이수할 경우,<br>복수전공 이수학점이 상향 조정됨</td>
+        </tr>
+        <tr>
+          <th>설계전공</th>
+          <td>36</td>
+          <td>
+            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;"> 학점
+          </td>
+          <th rowspan="3">교차<br>인정<br>학점<br>(최대 : 6)</th>
+          <td>
+            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;"> 학점
+          </td>
+          <td>설계전공 허가 사항(교과과정표)와 대조하여 확인</td>
+        </tr>
+        <tr>
+          <th>연계전공</th>
+          <td>36</td>
+          <td>
+            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;"> 학점
+          </td>
+          <td>
+            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;"> 학점
+          </td>
+          <td rowspan="2">수강 및 학사안내 연계/융합전공<br>교과과정표와 대조하여 확인</td>
+        </tr>
+        <tr>
+          <th>융합전공</th>
+          <td>36</td>
+          <td>
+            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;"> 학점
+          </td>
+          <td>
+            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;"> 학점
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2">부전공</th>
+          <td>21</td>
+          <td colspan="3">
+            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;"> 학점
+          </td>
+          <td>부전공 전공필수 6학점 이상 포함하여 수강</td>
+        </tr>
+        <tr>
+          <th colspan="2">자유선택</th>
+          <td>1</td>
+          <td colspan="3">
+            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;"> 학점
+          </td>
+          <td>CAU세미나 1학점 필수이수</td>
+        </tr>
+        <tr>
+          <th colspan="2">교직</th>
+          <td>22</td>
+          <td colspan="3">
+            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;"> 학점
+          </td>
+          <td>이수기준 통과 여부는 교직팀에 문의할 것</td>
+        </tr>
+        <tr>
+          <th colspan="2">이수학점 합계</th>
+          <td>132</td>
+          <td colspan="3"></td>
+          <td>교양학점은 최대 45학점까지 인정</td>
+        </tr>
+      </table>
+    </form><br>
   </div>
+  <div class="buttons">
+    <input type="button" value="결과확인" onclick=";">
+    <input type="reset" value="초기화" onclick=";">
+  </div><br>
+  <div id="etc" class="checklist">
+    <form id="checklist_major_others">
+      <h4>4. 기타 졸업요건</h4>
+      <table border="solid" width="100%">
+        <tr>
+          <th rowspan="2">졸업인정제<br>통과 여부</th>
+          <th>영어</th>
+          <td>
+            <input type="checkbox" name="English"> 통과
+          </td>
+        </tr>
+        <tr>
+          <th>한자</th>
+          <td>
+            <input type="checkbox" name=""> 통과
+          </td>
+        </tr>
+        <tr>
+          <th rowspan="2">졸업시험/논문<br>통과</th>
+          <th>주전공</th>
+          <td>
+            <input type="checkbox" name=""> 통과
+          </td>
+        </tr>
+        <tr>
+          <th>복수전공</th>
+          <td>
+             <input type="checkbox" name=""> 통과
+             <input type="checkbox" name=""> 해당없음
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2">전 학년 평균 평점</th>
+          <td></td>
+        </tr>
+      </table>
+    </form><br>
+  </div>
+
 
   <script type="text/javascript">
     function Liveral_Sum() {
@@ -326,7 +397,7 @@
           word += " - 영어 : " + [2 - common_eng_point] + " 학점 미달\n";
           if (common_etc_point < 10) {
             word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
-            if(core_total_point < 15){
+            if (core_total_point < 15) {
               word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
               if (liveral_total_point < 45) {
                 word += "교양영역 계 : " + liveral_total_point + " 학점"
@@ -343,7 +414,7 @@
             }
           } else {
             word += " - 기타 : 기준 통과\n"
-            if(core_total_point < 15){
+            if (core_total_point < 15) {
               word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
               if (liveral_total_point < 45) {
                 word += "교양영역 계 : " + liveral_total_point + " 학점"
@@ -359,11 +430,11 @@
               }
             }
           }
-        } else if(0 < common_eng_point < 2){
+        } else if (0 < common_eng_point < 2) {
           word += " - 영어 : 면제\n";
           if (common_etc_point < 10) {
             word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
-            if(core_total_point < 15){
+            if (core_total_point < 15) {
               word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
               if (liveral_total_point < 45) {
                 word += "교양영역 계 : " + liveral_total_point + " 학점"
@@ -380,7 +451,7 @@
             }
           } else {
             word += " - 기타 : 기준 통과\n"
-            if(core_total_point < 15){
+            if (core_total_point < 15) {
               word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
               if (liveral_total_point < 45) {
                 word += "교양영역 계 : " + liveral_total_point + " 학점"
@@ -400,7 +471,7 @@
           word += " - 영어 : 기준 통과\n";
           if (common_etc_point < 10) {
             word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
-            if(core_total_point < 15){
+            if (core_total_point < 15) {
               word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
               if (liveral_total_point < 45) {
                 word += "교양영역 계 : " + liveral_total_point + " 학점"
@@ -417,7 +488,7 @@
             }
           } else {
             word += " - 기타 : 기준 통과\n"
-            if(core_total_point < 15){
+            if (core_total_point < 15) {
               word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
               if (liveral_total_point < 45) {
                 word += "교양영역 계 : " + liveral_total_point + " 학점"
@@ -440,7 +511,7 @@
           word += " - 영어 : " + [2 - common_eng_point] + " 학점 미달\n";
           if (common_etc_point < 10) {
             word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
-            if(core_total_point < 15){
+            if (core_total_point < 15) {
               word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
               if (liveral_total_point < 45) {
                 word += "교양영역 계 : " + liveral_total_point + " 학점"
@@ -457,7 +528,7 @@
             }
           } else {
             word += " - 기타 : 기준 통과\n"
-            if(core_total_point < 15){
+            if (core_total_point < 15) {
               word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
               if (liveral_total_point < 45) {
                 word += "교양영역 계 : " + liveral_total_point + " 학점"
@@ -473,11 +544,11 @@
               }
             }
           }
-        } else if(0 < common_eng_point < 2){
+        } else if (0 < common_eng_point < 2) {
           word += " - 영어 : 면제\n";
           if (common_etc_point < 10) {
             word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
-            if(core_total_point < 15){
+            if (core_total_point < 15) {
               word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
               if (liveral_total_point < 45) {
                 word += "교양영역 계 : " + liveral_total_point + " 학점"
@@ -494,7 +565,7 @@
             }
           } else {
             word += " - 기타 : 기준 통과\n"
-            if(core_total_point < 15){
+            if (core_total_point < 15) {
               word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
               if (liveral_total_point < 45) {
                 word += "교양영역 계 : " + liveral_total_point + " 학점"
@@ -514,7 +585,7 @@
           word += " - 영어 : 기준 통과\n";
           if (common_etc_point < 10) {
             word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
-            if(core_total_point < 15){
+            if (core_total_point < 15) {
               word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
               if (liveral_total_point < 45) {
                 word += "교양영역 계 : " + liveral_total_point + " 학점"
@@ -531,7 +602,7 @@
             }
           } else {
             word += " - 기타 : 기준 통과\n"
-            if(core_total_point < 15){
+            if (core_total_point < 15) {
               word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
               if (liveral_total_point < 45) {
                 word += "교양영역 계 : " + liveral_total_point + " 학점"
