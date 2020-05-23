@@ -40,6 +40,19 @@
       margin: auto;
       text-align: center;
     }
+
+    .inputnumber {
+      width: 2.9rem;
+      height: 1.2rem;
+      text-align: center;
+    }
+
+    .totalnumber {
+      width: 2.5rem;
+      height: 1.2rem;
+      text-align: center;
+      border: 0px;
+    }
   </style>
 </head>
 
@@ -76,8 +89,7 @@
           <td colspan="2">0</td>
           <td></td>
           <td colspan="2">
-            <input type="number" id="elective_liveral" placeholder="숫자" value="0" onchange="Liveral_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' min="0" max="50"
-              style="width:2.9rem;height:1.2rem;text-align:center;"> 학점
+            <input type="number" id="elective_liveral" placeholder="숫자" value="0" onchange="Liveral_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' min="0" max="50" class="inputnumber"> 학점
           </td>
           <td>자율이수</td>
         </tr>
@@ -115,7 +127,7 @@
               <option value="8">8</option>
               <option value="10">10</option>
             </select> 학점<br>
-          <input type="checkbox" id="account_check" value="">회계학원론(회계원리) 이수</td>
+            <input type="checkbox" id="account_check" value="">회계학원론(회계원리) 이수</td>
           <td>1학년 의무수강 : 창의와소통/회계와사회/<br>컴퓨팅적사고와문제해결/<br>2학년 의무수강 : ACT/한국사
             <br>회계학원론(회계원리) 이수 시 "회계와사회" 면제</td>
         </tr>
@@ -127,8 +139,7 @@
           <td rowspan="5"></td>
           <td><input type="checkbox" id="core1"> 이수</td>
           <td rowspan="5">
-            <input type="number" id="core_total" placeholder="숫자" value="0" onchange="Liveral_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' style="width:2.9rem;height:1.2rem;text-align:center;" min="0"
-              max="50"> 학점
+            <input type="number" id="core_total" placeholder="숫자" value="0" onchange="Liveral_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' class="inputnumber" min="0" max="50"> 학점
           </td>
           <td rowspan="5">각 영역당<br>1과목 이상 필수 이수</td>
         </tr>
@@ -157,7 +168,7 @@
           <td colspan="2">29</td>
           <td>45</td>
           <td colspan="2">
-            <input type="text" id="liveral_total" value="0" style="width:2.5rem;height:1.2rem;text-align:center;border:0px;" readonly> 학점
+            <input type="text" id="liveral_total" value="0" class="totalnumber" readonly> 학점
           </td>
           <td>45 학점 초과 이수 시<br>초과한 만큼<br>졸업학점에서 감산</td>
         </tr>
@@ -223,7 +234,7 @@
             <input type="text" id="major_standard" value="" style="width:2.9rem;height:1.2rem;text-align:center;border:0px;" readonly>
             <br>(전공필수 포함)</td>
           <td colspan="3">
-            <input type="number" id="major_input" placeholder="숫자" name="major" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' min="0" max="78" style="width:2.9rem;height:1.2rem;text-align:center;"> 학점
+            <input type="number" id="major_input" placeholder="숫자" name="major" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' min="0" max="78" class="inputnumber"> 학점
           </td>
           <td>전공심화 : 최소 66 학점<br>전공이수_복수/설계/연계/융합 : 최소 45 학점</td>
         </tr>
@@ -232,18 +243,18 @@
           <th>복수전공</th>
           <td>45</td>
           <td colspan="3">
-            <input type="number" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;text-align:center;" min="0"> 학점
+            <input type="number" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0"> 학점
           </td>
           <td>복수전공 전공기초는 자유선택으로 인정<br>복수전공을 교직이수할 경우,<br>복수전공 이수학점이 상향 조정됨</td>
         </tr>
         <tr>
-          <th id="Multimajor_name"></th>
+          <th><input type="text" id="Multimajor_name" value=""> </th>
           <td></td>
-          <td><input type="number" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;text-align:center;" min="0"> 학점
+          <td><input type="number" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0"> 학점
           </td>
           <th>교차인정<br>(최대 : 6)</th>
           <td>
-            <input type="number" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;text-align:center;" min="0" max="6"> 학점
+            <input type="number" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" max="6"> 학점
           </td>
           <td>설계전공 허가 사항(교과과정표)와 대조하여 확인<br>수강 및 학사안내 연계/융합전공
             <br>교과과정표와 대조하여 확인<br>금융공학 융합전공 최소학점 : 45 학점 </td>
@@ -252,7 +263,7 @@
           <th colspan="2">부전공</th>
           <td>21</td>
           <td colspan="3">
-            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;text-align:center;"> 학점
+            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber"> 학점
           </td>
           <td>부전공 전공필수 6학점 이상 포함하여 수강</td>
         </tr>
@@ -260,7 +271,7 @@
           <th colspan="2">자유선택</th>
           <td>1</td>
           <td colspan="3">
-            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;text-align:center;"> 학점
+            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber"> 학점
           </td>
           <td>CAU세미나(1),(2) 총 1 학점 필수이수</td>
         </tr>
@@ -268,14 +279,16 @@
           <th colspan="2">교직</th>
           <td>22</td>
           <td colspan="3">
-            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style="width:2.9rem;height:1.2rem;text-align:center;"> 학점
+            <input type="text" id="" placeholder="숫자" name="" value="0" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber"> 학점
           </td>
           <td>이수기준 통과 여부는 교직팀에 문의할 것</td>
         </tr>
         <tr>
           <th colspan="2">이수학점 합계</th>
           <td>132</td>
-          <td colspan="3"></td>
+          <td colspan="3">
+            <input type="text" id="_total" value="0" class="totalnumber" readonly> 학점
+          </td>
           <td>교양학점은 최대 45학점까지 인정</td>
         </tr>
       </table>
@@ -288,7 +301,7 @@
   </div><br>
 
   <div id="etc" class="checklist">
-    <form id="checklist_major_others">
+    <form id="checklist_etc">
       <h4>3. 기타 졸업요건</h4>
       <table border="solid" width="100%">
         <tr>
@@ -301,29 +314,34 @@
         <tr>
           <th>한자</th>
           <td>
-            <input type="checkbox" name=""> 통과
+            <input type="checkbox" name="Hanja"> 통과
           </td>
         </tr>
         <tr>
-          <th rowspan="2">졸업시험/논문<br>통과</th>
+          <th rowspan="2">졸업시험/논문<br>통과 여부</th>
           <th>주전공</th>
           <td>
-            <input type="checkbox" name=""> 통과
+            <input type="checkbox" name="major_paper"> 통과
           </td>
         </tr>
         <tr>
           <th>복수전공</th>
           <td>
-            <input type="checkbox" name=""> 통과
-            <input type="checkbox" name=""> 해당없음
+            <input type="radio" name="double_major_paper"> 통과
+            <input type="radio" name="double_major_paper"> 해당없음
           </td>
         </tr>
         <tr>
-          <th colspan="2">전 학년 평균 평점</th>
-          <td></td>
+          <th colspan="2">전 학년 평균 평점<br>(평점 2.0 이상 졸업가능)</th>
+          <td><input type="number" name="average" value="" max="4.5" min="0" class="inputnumber"> / 4.5</td>
         </tr>
       </table>
     </form><br>
+    <div class="buttons">
+      <input type="button" value="결과확인" onclick="">
+      <input type="reset" value="초기화" onclick="Etc_Reset()">
+    </div>
+    <br>
   </div>
 
 
@@ -362,112 +380,226 @@
         word += "공통교양\n - 국어 : " + [2 - common_kor_point] + " 학점 미달\n";
         if (common_eng_point < 0.5) {
           word += " - 영어 : " + [2 - common_eng_point] + " 학점 미달\n";
-          if (common_etc_point < 10) {
-            word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
-            if (core_total_point < 15) {
-              word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+          if (!account_check_SF) {
+            if (common_etc_point < 10) {
+              word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             } else {
-              word += "핵심교양 : 최소학점 기준통과\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+              word += " - 기타 : 기준 통과\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             }
           } else {
-            word += " - 기타 : 기준 통과\n"
-            if (core_total_point < 15) {
-              word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+            if (common_etc_point < 8) {
+              word += " - 기타 : " + [8 - common_etc_point] + " 학점 미달 ( 회계와사회 : 면제 )\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             } else {
-              word += "핵심교양 : 최소학점 기준통과\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+              word += " - 기타 : 기준 통과 ( 회계와사회 : 면제 )\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             }
           }
         } else if (0 < common_eng_point < 2) {
           word += " - 영어 : 면제\n";
-          if (common_etc_point < 10) {
-            word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
-            if (core_total_point < 15) {
-              word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+          if (!account_check_SF) {
+            if (common_etc_point < 10) {
+              word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             } else {
-              word += "핵심교양 : 최소학점 기준통과\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+              word += " - 기타 : 기준 통과\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             }
           } else {
-            word += " - 기타 : 기준 통과\n"
-            if (core_total_point < 15) {
-              word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+            if (common_etc_point < 8) {
+              word += " - 기타 : " + [8 - common_etc_point] + " 학점 미달 ( 회계와사회 : 면제 )\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             } else {
-              word += "핵심교양 : 최소학점 기준통과\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+              word += " - 기타 : 기준 통과 ( 회계와사회 : 면제 )\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             }
           }
         } else {
           word += " - 영어 : 기준 통과\n";
-          if (common_etc_point < 10) {
-            word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
-            if (core_total_point < 15) {
-              word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+          if (!account_check_SF) {
+            if (common_etc_point < 10) {
+              word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             } else {
-              word += "핵심교양 : 최소학점 기준통과\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+              word += " - 기타 : 기준 통과\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             }
           } else {
-            word += " - 기타 : 기준 통과\n"
-            if (core_total_point < 15) {
-              word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+            if (common_etc_point < 8) {
+              word += " - 기타 : " + [8 - common_etc_point] + " 학점 미달 ( 회계와사회 : 면제 )\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             } else {
-              word += "핵심교양 : 최소학점 기준통과\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+              word += " - 기타 : 기준 통과 ( 회계와사회 : 면제 )\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             }
           }
@@ -476,112 +608,226 @@
         word += "공통교양\n - 국어 : 기준 통과\n";
         if (common_eng_point < 0.5) {
           word += " - 영어 : " + [2 - common_eng_point] + " 학점 미달\n";
-          if (common_etc_point < 10) {
-            word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
-            if (core_total_point < 15) {
-              word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+          if (!account_check_SF) {
+            if (common_etc_point < 10) {
+              word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             } else {
-              word += "핵심교양 : 최소학점 기준통과\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+              word += " - 기타 : 기준 통과\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             }
           } else {
-            word += " - 기타 : 기준 통과\n"
-            if (core_total_point < 15) {
-              word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+            if (common_etc_point < 8) {
+              word += " - 기타 : " + [8 - common_etc_point] + " 학점 미달 ( 회계와사회 : 면제 )\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             } else {
-              word += "핵심교양 : 최소학점 기준통과\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+              word += " - 기타 : 기준 통과 ( 회계와사회 : 면제 )\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             }
           }
         } else if (0 < common_eng_point < 2) {
           word += " - 영어 : 면제\n";
-          if (common_etc_point < 10) {
-            word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
-            if (core_total_point < 15) {
-              word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+          if (!account_check_SF) {
+            if (common_etc_point < 10) {
+              word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             } else {
-              word += "핵심교양 : 최소학점 기준통과\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+              word += " - 기타 : 기준 통과\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             }
           } else {
-            word += " - 기타 : 기준 통과\n"
-            if (core_total_point < 15) {
-              word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+            if (common_etc_point < 8) {
+              word += " - 기타 : " + [8 - common_etc_point] + " 학점 미달 ( 회계와사회 : 면제 )\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             } else {
-              word += "핵심교양 : 최소학점 기준통과\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+              word += " - 기타 : 기준 통과 ( 회계와사회 : 면제 )\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             }
           }
         } else {
           word += " - 영어 : 기준 통과\n";
-          if (common_etc_point < 10) {
-            word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
-            if (core_total_point < 15) {
-              word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+          if (!account_check_SF) {
+            if (common_etc_point < 10) {
+              word += " - 기타 : " + [10 - common_etc_point] + " 학점 미달\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             } else {
-              word += "핵심교양 : 최소학점 기준통과\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+              word += " - 기타 : 기준 통과\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             }
           } else {
-            word += " - 기타 : 기준 통과\n"
-            if (core_total_point < 15) {
-              word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+            if (common_etc_point < 8) {
+              word += " - 기타 : " + [8 - common_etc_point] + " 학점 미달 ( 회계와사회 : 면제 )\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             } else {
-              word += "핵심교양 : 최소학점 기준통과\n"
-              if (liveral_total_point <= 45) {
-                word += "교양영역 계 : " + liveral_total_point + " 학점"
+              word += " - 기타 : 기준 통과 ( 회계와사회 : 면제 )\n"
+              if (core_total_point < 15) {
+                word += "핵심교양 : " + [15 - core_total_point] + " 학점 미달\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               } else {
-                word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                word += "핵심교양 : 최소학점 기준통과\n"
+                if (liveral_total_point <= 45) {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점"
+                } else {
+                  word += "교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+                }
               }
             }
           }
@@ -661,6 +907,14 @@
       alert(word)
     }
 
+    function Etc_result() {
+      var English_result = document.getElementsByName('English').checked;
+      var Hanja_result = document.getElementsByName('Hanja').checked;
+      var paper_result = document.getElementsByName('major_paper').checked;
+      var paper_result2 = document.getElementsByName('double_major_paper').checked;
+      var average_result = Number(document.getElementsByName('average').value);
+
+    }
 
     function onlyNumber(event) {
       event = event || window.event;
@@ -687,6 +941,12 @@
     function Major_Reset() {
       document.getElementById("checklist_major").reset()
     }
+
+    function Etc_Reset() {
+      document.getElementById("checklist_etc").reset()
+    }
+
+
   </script>
 
 </body>
