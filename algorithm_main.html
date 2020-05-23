@@ -76,7 +76,7 @@
           <td colspan="2">0</td>
           <td></td>
           <td colspan="2">
-            <input type="number" id="elective_liveral" placeholder="숫자" value="0" onchange="Liveral_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' min="0"
+            <input type="number" id="elective_liveral" placeholder="숫자" value="0" onchange="Liveral_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' min="0" max="50"
               style="width:2.9rem;height:1.2rem;text-align:center;"> 학점
           </td>
           <td>자율이수</td>
@@ -128,7 +128,7 @@
           <td><input type="checkbox" id="core1"> 이수</td>
           <td rowspan="5">
             <input type="number" id="core_total" placeholder="숫자" value="0" onchange="Liveral_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' style="width:2.9rem;height:1.2rem;text-align:center;" min="0"
-              max="99"> 학점
+              max="50"> 학점
           </td>
           <td rowspan="5">각 영역당<br>1과목 이상 필수 이수</td>
         </tr>
