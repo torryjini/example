@@ -580,34 +580,122 @@
       var Multimajortext = Multimajor.options[Multimajor.selectedIndex].text;
       if (Multimajortext.includes("심화")) {
         document.getElementById("double_major_none").checked = true;
+        document.getElementById("double_major_point").value = null;
+        document.getElementById("double_major_point").readOnly = true;
+
         document.getElementById("link_major_none").checked = true;
+        document.getElementById("link_major_point").value = null;
+        document.getElementById("link_major_point").readOnly = true;
+        document.getElementById("cross_point1").value = null;
+        document.getElementById("cross_point1").readOnly = true;
+
         document.getElementById("fusion_major_none").checked = true;
+        document.getElementById("fusion_major_point").value = null;
+        document.getElementById("fusion_major_point").readOnly = true;
+        document.getElementById("cross_point2").value = null;
+        document.getElementById("cross_point2").readOnly = true;
+
         document.getElementById("plan_major_none").checked = true;
+        document.getElementById("plan_major_point").value = null;
+        document.getElementById("plan_major_point").readOnly = true;
+        document.getElementById("cross_point3").value = null;
+        document.getElementById("cross_point3").readOnly = true;
       } else if (Multimajortext.includes("복수")) {
         document.getElementById("double_major_none").checked = false;
+        document.getElementById("double_major_point").readOnly = false;
+
         document.getElementById("link_major_none").checked = true;
+        document.getElementById("link_major_point").value = null;
+        document.getElementById("link_major_point").readOnly = true;
+        document.getElementById("cross_point1").value = null;
+        document.getElementById("cross_point1").readOnly = true;
+
         document.getElementById("fusion_major_none").checked = true;
+        document.getElementById("fusion_major_point").value = null;
+        document.getElementById("fusion_major_point").readOnly = true;
+        document.getElementById("cross_point2").value = null;
+        document.getElementById("cross_point2").readOnly = true;
+
         document.getElementById("plan_major_none").checked = true;
+        document.getElementById("plan_major_point").value = null;
+        document.getElementById("plan_major_point").readOnly = true;
+        document.getElementById("cross_point3").value = null;
+        document.getElementById("cross_point3").readOnly = true;
       } else if (Multimajortext.includes("연계")) {
         document.getElementById("double_major_none").checked = true;
+        document.getElementById("double_major_point").value = null;
+        document.getElementById("double_major_point").readOnly = true;
+
         document.getElementById("link_major_none").checked = false;
+        document.getElementById("link_major_point").readOnly = false;
+        document.getElementById("cross_point1").readOnly = false;
+
         document.getElementById("fusion_major_none").checked = true;
+        document.getElementById("fusion_major_point").value = null;
+        document.getElementById("fusion_major_point").readOnly = true;
+        document.getElementById("cross_point2").value = null;
+        document.getElementById("cross_point2").readOnly = true;
+
         document.getElementById("plan_major_none").checked = true;
+        document.getElementById("plan_major_point").value = null;
+        document.getElementById("plan_major_point").readOnly = true;
+        document.getElementById("cross_point3").value = null;
+        document.getElementById("cross_point3").readOnly = true;
       } else if (Multimajortext.includes("융합")) {
         document.getElementById("double_major_none").checked = true;
+        document.getElementById("double_major_point").value = null;
+        document.getElementById("double_major_point").readOnly = true;
+
         document.getElementById("link_major_none").checked = true;
+        document.getElementById("link_major_point").value = null;
+        document.getElementById("link_major_point").readOnly = true;
+        document.getElementById("cross_point1").value = null;
+        document.getElementById("cross_point1").readOnly = true;
+
         document.getElementById("fusion_major_none").checked = false;
+        document.getElementById("fusion_major_point").readOnly = false;
+        document.getElementById("cross_point2").readOnly = false;
+
         document.getElementById("plan_major_none").checked = true;
+        document.getElementById("plan_major_point").value = null;
+        document.getElementById("plan_major_point").readOnly = true;
+        document.getElementById("cross_point3").value = null;
+        document.getElementById("cross_point3").readOnly = true;
       } else if (Multimajortext.includes("설계")) {
         document.getElementById("double_major_none").checked = true;
+        document.getElementById("double_major_point").value = null;
+        document.getElementById("double_major_point").readOnly = true;
+
         document.getElementById("link_major_none").checked = true;
+        document.getElementById("link_major_point").value = null;
+        document.getElementById("link_major_point").readOnly = true;
+        document.getElementById("cross_point1").value = null;
+        document.getElementById("cross_point1").readOnly = true;
+
         document.getElementById("fusion_major_none").checked = true;
+        document.getElementById("fusion_major_point").value = null;
+        document.getElementById("fusion_major_point").readOnly = true;
+        document.getElementById("cross_point2").value = null;
+        document.getElementById("cross_point2").readOnly = true;
+
         document.getElementById("plan_major_none").checked = false;
+        document.getElementById("plan_major_point").readOnly = false;
+        document.getElementById("cross_point3").readOnly = false;
       } else if (Multimajortext.includes("다전공")) {
         document.getElementById("double_major_none").checked = false;
+        document.getElementById("double_major_point").readOnly = false;
+
         document.getElementById("link_major_none").checked = false;
+        document.getElementById("link_major_point").readOnly = false;
+        document.getElementById("cross_point1").readOnly = false;
+
         document.getElementById("fusion_major_none").checked = false;
+        document.getElementById("fusion_major_point").readOnly = false;
+        document.getElementById("cross_point2").readOnly = false;
+
         document.getElementById("plan_major_none").checked = false;
+        document.getElementById("plan_major_point").readOnly = false;
+        document.getElementById("cross_point3").readOnly = false;
       }
     }
 
