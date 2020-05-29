@@ -16,7 +16,7 @@ ul, li {
 table {
   margin: auto;
   width: 100%;
-  border : 1px solid #3c36365e;
+  border: 1px solid #3c36365e;
   border-collapse: collapse;
 }
 
@@ -31,24 +31,49 @@ select {
   border-radius: 3px;
 }
 
+.checkselect {
+  width: 3.2rem;
+  height: 1.5rem;
+}
+
+.buttons {
+  margin: auto;
+  text-align: center;
+}
+
+.inputnumber {
+  width: 3.25rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.totalnumber {
+  width: 2.5rem;
+  height: 1.2rem;
+  text-align: center;
+  border: 0px;
+}
+
 .w3-container {
   text-align: center;
   justify-content: center;
   font-family: 'Noto Sans KR', sans-serif;
-  margin-left: 12%;
-  margin-right: 12%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 @media all and (orientation:portrait) {
-      table {
-        margin-left: 0;
-        margin-right: 0;
-      }
-      .w3-container  {
-          margin-left: 0;
-          margin-right: 0;
-        }
-      }
+  table {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .w3-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
 #content-info {
   text-align: left;
@@ -67,6 +92,10 @@ select {
   text-align: right;
   justify-content: center;
   margin-top: 1rem;
+}
+
+#student_info {
+  text-align: center;
 }
 
 #standard, #etc, #relsite {
