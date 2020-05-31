@@ -64,8 +64,8 @@
         <table border="solid" width="100%">
           <tr>
             <th colspan="2" width="10%">구분</th>
-            <th colspan="2" width="14%">최소학점</th>
-            <th width="11%">최대학점</th>
+            <th colspan="2" width="13%">최소학점</th>
+            <th width="12%">최대학점</th>
             <th width="30%" colspan="2">이수학점</th>
             <th width="35%">이수기준</th>
           </tr>
@@ -123,8 +123,8 @@
             <td>2~3</td>
             <td rowspan="5">15</td>
             <td rowspan="5"></td>
-            <td><input type="checkbox" id="core1"> 이수</td>
-            <td rowspan="5">
+            <td width="14%"><input type="checkbox" id="core1"> 이수</td>
+            <td width="16%" rowspan="5">
               <input type="number" id="core_total" placeholder="0" value="" onchange="Liveral_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' class="inputnumber" min="0" max="50" maxlength="2"
                 oninput="maxLengthCheck(this)"> 학점
             </td>
