@@ -59,8 +59,8 @@
         <table border="solid" width="100%">
           <tr>
             <th colspan="2" width="10%">구분</th>
-            <th colspan="2" width="20%">최소이수학점</th>
-            <th width="20%">최대이수학점</th>
+            <th colspan="2" width="20%">최소학점</th>
+            <th width="20%">최대학점</th>
             <th width="20%" colspan="2">이수학점</th>
             <th>이수기준</th>
           </tr>
@@ -152,7 +152,7 @@
             <td colspan="2">
               <input type="text" id="liveral_total" value="0" class="totalnumber" onchange="total_point_sum()" readonly> 학점
             </td>
-            <td>45 학점 초과 이수 시<br>초과한 만큼<br>졸업학점에서 감산</td>
+            <td>45 학점 초과 시<br>졸업학점에서 감산</td>
           </tr>
         </table>
       </form>
@@ -177,7 +177,7 @@
         <table border="solid" width="100%">
           <tr>
             <th colspan="2">구분</th>
-            <th>최소이수학점</th>
+            <th>최소학점</th>
             <th colspan="3">이수학점</th>
             <th>이수기준</th>
           </tr>
@@ -194,7 +194,7 @@
                 <option value="15">15</option>
               </select> 학점
             </td>
-            <td>전공기초 과목 : 심리통계/심리학개론/<br>발달심리학/성격심리/정서심리학</td>
+            <td>심리통계/심리학개론/<br>발달심리학/성격심리/정서심리학</td>
           </tr>
           <tr>
             <th colspan="2">전공필수</th>
@@ -209,7 +209,7 @@
                 <option value="15">15</option>
               </select> 학점
             </td>
-            <td>전공필수 과목 : 실험심리학/사회심리학/<br>생물심리학/학습심리학/인지심리학</td>
+            <td>실험심리학/사회심리학/<br>생물심리학/학습심리학/인지심리학</td>
           </tr>
           <tr>
             <th colspan="2">전공과목</th>
@@ -228,7 +228,7 @@
             <td>45</td>
             <td colspan="3">
               <input type="number" id="double_major_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" max="78" maxlength="2"
-                oninput="maxLengthCheck(this)"> 학점
+                oninput="maxLengthCheck(this)"> 학점<br>
               <input type="checkbox" id="double_major_none" onclick="checkcont1()"> 해당없음
             </td>
             <td>복수전공 전공기초는 자유선택으로 인정<br>복수전공을 교직이수할 경우,<br>복수전공 이수학점이 상향 조정됨</td>
@@ -238,7 +238,7 @@
             <td>36</td>
             <td>
               <input type="number" id="link_major_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" maxlength="2"
-                oninput="maxLengthCheck(this)"> 학점
+                oninput="maxLengthCheck(this)"> 학점<br>
               <input type="checkbox" id="link_major_none" onclick="checkcont2()"> 해당없음
             </td>
             <th rowspan="3">교차인정<br>(최대 : 6)</th>
@@ -253,7 +253,7 @@
             <td>36/45</td>
             <td>
               <input type="number" id="fusion_major_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" maxlength="2"
-                oninput="maxLengthCheck(this)"> 학점
+                oninput="maxLengthCheck(this)"> 학점<br>
               <input type="checkbox" id="fusion_major_none" onclick="checkcont3()"> 해당없음
             </td>
             <td>
@@ -265,7 +265,7 @@
             <td>36</td>
             <td>
               <input type="number" id="plan_major_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" maxlength="2"
-                oninput="maxLengthCheck(this)"> 학점
+                oninput="maxLengthCheck(this)"> 학점<br>
               <input type="checkbox" id="plan_major_none" onclick="checkcont4()"> 해당없음
             </td>
             <td>
@@ -278,8 +278,7 @@
             <td>21</td>
             <td colspan="3">
               <input type="number" id="minor_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" maxlength="2"
-                oninput="maxLengthCheck(this)">
-              학점
+                oninput="maxLengthCheck(this)"> 학점<br>
               <input type="checkbox" id="minor_none" onclick="checkcont5()" checked> 해당없음
             </td>
             <td>부전공 전공필수 6학점 이상 포함하여 수강</td>
@@ -299,7 +298,7 @@
             <td>22</td>
             <td colspan="3">
               <input type="number" id="teaching_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' min="0" max="30" class="inputnumber" maxlength="2"
-                oninput="maxLengthCheck(this)"> 학점
+                oninput="maxLengthCheck(this)"> 학점<br>
               <input type="checkbox" id="teaching_none" onclick="checkcont6()" checked> 해당없음
             </td>
             <td>이수기준 통과 여부는 교직팀에 문의할 것</td>
@@ -335,7 +334,7 @@
             <th>이수 기준</th>
           </tr>
           <tr>
-            <th rowspan="2">졸업인정제<br>통과 여부</th>
+            <th rowspan="2">졸업인정제</th>
             <th>영어</th>
             <td>
               <input type="checkbox" id="English"> 통과/면제
@@ -350,7 +349,7 @@
             <td>국가공인 한자능력<br>검정시험 3급 이상</td>
           </tr>
           <tr>
-            <th rowspan="2">졸업시험/논문<br>합격 여부</th>
+            <th rowspan="2">졸업시험/논문</th>
             <th>주전공</th>
             <td>
               <input type="checkbox" id="major_paper"> 합격
@@ -365,9 +364,9 @@
             <td></td>
           </tr>
           <tr>
-            <th colspan="2">전 학년 평균 평점<br>(평점 2.0 이상 졸업가능)</th>
+            <th colspan="2">전 학년 평점</th>
             <td><input type="number" placeholder="0" id="average" value="" max="4.5" min="0" step=".01" class="inputnumber" maxlength="4" oninput="maxLengthCheck(this)"> / 4.5</td>
-            <td>금학기 보관성적 이관 후<br>최종 평균평점 2.0 미만인 자 졸업 불가</td>
+            <td>금학기 보관성적 이관 후<br>최종 평점 2.0 미만인 자 졸업 불가</td>
           </tr>
         </table>
       </form><br>
