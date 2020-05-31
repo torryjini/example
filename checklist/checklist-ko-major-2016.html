@@ -123,8 +123,8 @@
             <td>2~3</td>
             <td rowspan="5">15</td>
             <td rowspan="5"></td>
-            <td width="14%"><input type="checkbox" id="core1"> 이수</td>
-            <td width="16%" rowspan="5">
+            <td width="13%"><input type="checkbox" id="core1"> 이수</td>
+            <td width="17%" rowspan="5">
               <input type="number" id="core_total" placeholder="0" value="" onchange="Liveral_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' class="inputnumber" min="0" max="50" maxlength="2"
                 oninput="maxLengthCheck(this)"> 학점
             </td>
@@ -241,13 +241,13 @@
           <tr>
             <th>연계<br>전공</th>
             <td>36</td>
-            <td>
+            <td width="15%">
               <input type="number" id="link_major_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" maxlength="2"
                 oninput="maxLengthCheck(this)"> 학점<br>
               <input type="checkbox" id="link_major_none" onclick="checkcont2()"> 해당없음
             </td>
-            <th rowspan="3">교차인정<br>(최대 : 6)</th>
-            <td>
+            <th rowspan="3" width="10%">교차<br>인정<br>(최대 : 6)</th>
+            <td width="15%">
               <input type="number" id="cross_point1" placeholder="0" name="" value="" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" max="6" maxlength="1" oninput="maxLengthCheck(this)"> 학점
             </td>
             <td rowspan="2">수강 및 학사안내 연계/융합전공
