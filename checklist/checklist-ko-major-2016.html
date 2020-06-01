@@ -247,18 +247,20 @@
                 oninput="maxLengthCheck(this)"> 학점<br>
               <input type="checkbox" id="link_major_none" onclick="checkcont2()"> 해당없음
             </td>
-            <th rowspan="3" width="10%">교차<br>인정<br>(최대 : 6)</th>
+            <th rowspan="3" width="10%">교차<br>인정</th>
             <td width="15%">
-              <input type="number" id="cross_point1" placeholder="0" name="" value="" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" max="6" maxlength="1" oninput="maxLengthCheck(this)"> 학점
+              <input type="number" id="cross_point1" placeholder="0" name="" value="" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" max="12" maxlength="2" oninput="maxLengthCheck(this)"> 학점
+              <br>(최대 : 12)
             </td>
             <td rowspan="2">수강 및 학사안내 연계/융합전공
-              <br>교과과정표와 대조하여 확인<br>금융공학 융합전공 최소학점 : 45 학점 </td>
+              <br>교과과정표와 대조하여 확인
+              <br>융합전공 별로 최소학점이 36 또는 45 학점이며<br>교차인정 학점도 상이하므로 확인 필수</td>
           </tr>
           <tr>
             <th>융합<br>전공</th>
             <td>
               <input type="text" id="fusion_standard" value="36" style="width:2.9rem;height:1.2rem;text-align:center;border:0px;" readonly><br>
-              <input type="checkbox" id="fusion-45-check" onchange="FusionStandardCheck()"> 금융공학
+              <input type="checkbox" id="fusion-45-check" onchange="FusionStandardCheck()"> 기준변경
             </td>
             <td>
               <input type="number" id="fusion_major_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" maxlength="2"
@@ -266,7 +268,7 @@
               <input type="checkbox" id="fusion_major_none" onclick="checkcont3()"> 해당없음
             </td>
             <td>
-              <input type="number" id="cross_point2" placeholder="0" name="" value="" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" max="6" maxlength="1" oninput="maxLengthCheck(this)"> 학점
+              <input type="number" id="cross_point2" placeholder="0" name="" value="" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" max="15" maxlength="2" oninput="maxLengthCheck(this)"> 학점
             </td>
           </tr>
           <tr>
@@ -278,7 +280,8 @@
               <input type="checkbox" id="plan_major_none" onclick="checkcont4()"> 해당없음
             </td>
             <td>
-              <input type="number" id="cross_point3" placeholder="0" name="" value="" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" max="6" maxlength="1" oninput="maxLengthCheck(this)"> 학점
+              <input type="number" id="cross_point3" placeholder="0" name="" value="" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" max="6" maxlength="1" oninput="maxLengthCheck(this)"> 학점<br>
+              (최대 : 6)
             </td>
             <td>설계전공 허가 사항(교과과정표)와 대조하여 확인</td>
           </tr>
@@ -529,11 +532,11 @@
         word += "공통교양\n - 국어 : 기준 통과\n";
       }
 
-      if (common_eng_point < 0.5) {
+      if (common_eng_point < 0.4) {
         word += " - 영어 : " + [2 - common_eng_point] + " 학점 미달\n";
-      } else if (0 < common_eng_point < 2) {
+      } else if (0.4 < common_eng_point < 1) {
         word += " - 영어 : 면제\n";
-      } else {
+      } else if (common_eng_point = 2) {
         word += " - 영어 : 기준 통과\n";
       }
 
@@ -819,8 +822,9 @@
       if (!Teachingcheck) {
         if (Teachingpoint < 22)
           word += "교직이수 : " + [22 - Teachingpoint] + " 학점 미달\n"
-      } else {
-        word += "교직이수 : 최소학점 기준 통과\n"
+        else {
+          word += "교직이수 : 최소학점 기준 통과\n"
+        }
       }
 
       var TotalPoint = Number(document.getElementById("the_total").value);
