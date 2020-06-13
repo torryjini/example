@@ -1,3 +1,7 @@
+html {
+  word-break: keep-all;
+}
+
 body {
   margin: 0;
   padding: 0;
