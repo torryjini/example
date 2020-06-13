@@ -65,9 +65,9 @@
         <table border="solid" width="100%">
           <tr>
             <th colspan="2" width="8%">구분</th>
-            <th colspan="2" width="15%">최소학점</th>
-            <th width="12%">최대학점</th>
-            <th width="30%" colspan="2">이수학점</th>
+            <th colspan="2" width="15%">최소 학점</th>
+            <th width="12%">최대 학점</th>
+            <th width="30%" colspan="2">이수 학점</th>
             <th width="35%">이수기준</th>
           </tr>
           <tr>
@@ -115,7 +115,7 @@
                 <option value="10">10</option>
               </select> 학점<br>
               <input type="checkbox" id="account_check" value="">회계학원론(회계원리) 이수</td>
-            <td>1학년 : 창의와소통/회계와사회/<br>컴퓨팅적사고와문제해결/<br>2학년 : ACT/한국사
+            <td>1학년 : 창의와소통/회계와사회/<br>컴퓨팅적 사고와 문제해결/<br>2학년 : ACT/한국사
               <br>회계학원론(회계원리) 이수 시<br>"회계와사회" 면제</td>
           </tr>
           <tr>
@@ -158,7 +158,7 @@
             <td colspan="2">
               <input type="text" id="liveral_total" value="0" class="totalnumber" onchange="total_point_sum()" readonly> 학점
             </td>
-            <td>45 학점 초과 시<br>졸업학점에서 감산</td>
+            <td>45 학점 초과 시<br>졸업 학점에서 감산</td>
           </tr>
         </table>
       </form>
@@ -189,7 +189,7 @@
             <th width="35%">이수기준</th>
           </tr>
           <tr>
-            <th colspan="2">전공기초</th>
+            <th colspan="2">전공 기초</th>
             <td>10</td>
             <td colspan="3">
               <select id="base_selector" class="checkselect" onchange="total_point_sum()">
@@ -204,7 +204,7 @@
             <td>심리통계/심리학개론/<br>발달심리학/성격심리/정서심리학</td>
           </tr>
           <tr>
-            <th colspan="2">전공필수</th>
+            <th colspan="2">전공 필수</th>
             <td>9</td>
             <td colspan="3">
               <select id="nece_selector" class="checkselect" onchange="total_point_sum()">
@@ -219,7 +219,7 @@
             <td>실험심리학/사회심리학/<br>생물심리학/학습심리학/인지심리학</td>
           </tr>
           <tr>
-            <th colspan="2">전공과목</th>
+            <th colspan="2">전공 과목</th>
             <td>
               <input type="text" id="major_standard" value="" style="width:2.9rem;height:1.2rem;text-align:center;border:0px;" readonly>
               <br>(전공필수포함)</td>
@@ -227,7 +227,7 @@
               <input type="number" id="major_input" placeholder="0" name="major" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' min="0" max="78" class="inputnumber" maxlength="2"
                 oninput="maxLengthCheck(this)"> 학점
             </td>
-            <td>전공심화 : 최소 66 학점<br>복수/설계/연계/융합 : 최소 45 학점</td>
+            <td>전공 심화 : 최소 66 학점<br>복수/설계/연계/융합 : 최소 45 학점</td>
           </tr>
           <tr>
             <th rowspan="4">다전공</th>
@@ -294,7 +294,7 @@
                 oninput="maxLengthCheck(this)"> 학점<br>
               <input type="checkbox" id="minor_none" onclick="checkcont5()" checked> 해당없음
             </td>
-            <td>부전공 전공필수 6학점 이상 포함하여 수강</td>
+            <td>부전공 전공 필수 6학점 이상 포함하여 수강</td>
           </tr>
           <tr>
             <th colspan="2">자유선택</th>
@@ -363,7 +363,7 @@
             <td>국가공인 한자능력<br>검정시험 3급 이상</td>
           </tr>
           <tr>
-            <th rowspan="2">졸업시험/논문</th>
+            <th rowspan="2">졸업 시험/논문</th>
             <th>주전공</th>
             <td>
               <input type="checkbox" id="major_paper"> 합격
