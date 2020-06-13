@@ -189,7 +189,7 @@
             <th width="35%">이수기준</th>
           </tr>
           <tr>
-            <th colspan="2">전공 기초</th>
+            <th colspan="2">전공기초</th>
             <td>10</td>
             <td colspan="3">
               <select id="base_selector" class="checkselect" onchange="total_point_sum()">
@@ -204,7 +204,7 @@
             <td>심리통계/심리학개론/<br>발달심리학/성격심리/정서심리학</td>
           </tr>
           <tr>
-            <th colspan="2">전공 필수</th>
+            <th colspan="2">전공필수</th>
             <td>9</td>
             <td colspan="3">
               <select id="nece_selector" class="checkselect" onchange="total_point_sum()">
@@ -219,10 +219,10 @@
             <td>실험심리학/사회심리학/<br>생물심리학/학습심리학/인지심리학</td>
           </tr>
           <tr>
-            <th colspan="2">전공 과목</th>
+            <th colspan="2">전공과목</th>
             <td>
               <input type="text" id="major_standard" value="" style="width:2.9rem;height:1.2rem;text-align:center;border:0px;" readonly>
-              <br>(전공 필수 포함)</td>
+              <br>(전공필수 포함)</td>
             <td colspan="3">
               <input type="number" id="major_input" placeholder="0" name="major" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' min="0" max="78" class="inputnumber" maxlength="2"
                 oninput="maxLengthCheck(this)"> 학점
