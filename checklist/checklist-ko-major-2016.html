@@ -165,7 +165,7 @@
     </div><br>
     <div class="buttons">
       <input type="button" value="결과확인" onclick="Liveral_result();">
-      <input type="reset" value="초기화" onclick="Liveral_Reset();">
+      <input type="reset" value="초기화" onclick="Form_Reset('checklist_liberal')">
     </div>
     <br>
     <div id="major">
@@ -330,7 +330,7 @@
     <br>
     <div class="buttons">
       <input type="button" value="결과확인" onclick="Major_result();">
-      <input type="reset" value="초기화" onclick="Major_Reset();">
+      <input type="reset" value="초기화" onclick="Form_Reset('checklist_major')">
     </div><br>
 
     <div id="etc" class="checklist">
@@ -386,7 +386,7 @@
       </form><br>
       <div class="buttons">
         <input type="button" value="결과확인" onclick="Etc_result()">
-        <input type="reset" value="초기화" onclick="Etc_Reset()">
+        <input type="reset" value="초기화" onclick="Form_Reset('checklist_etc')">
       </div>
       <br>
     </div>
@@ -929,16 +929,8 @@
         event.target.value = event.target.value.replace(/[^0-9]/g, "");
     }
 
-    function Liveral_Reset() {
-      document.getElementById("checklist_liberal").reset()
-    }
-
-    function Major_Reset() {
-      document.getElementById("checklist_major").reset()
-    }
-
-    function Etc_Reset() {
-      document.getElementById("checklist_etc").reset()
+    function Form_Reset(id) {
+      document.getElementById(id).reset()
     }
   </script>
 
