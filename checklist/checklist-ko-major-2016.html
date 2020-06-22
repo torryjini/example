@@ -237,7 +237,7 @@
             <td colspan="3">
               <input type="number" id="double_major_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" max="78" maxlength="2"
                 oninput="maxLengthCheck(this)"> 학점<br>
-              <input type="checkbox" id="double_major_none" onclick="checkcont1()"> 해당없음
+              <input type="checkbox" id="double_major_none" onclick="checkcont1('double_major_none', 'double_major_point')"> 해당없음
             </td>
             <td>복수전공 전공기초는 자유선택으로 인정<br>복수전공을 교직이수할 경우,<br>복수전공 이수학점이 상향 조정됨</td>
           </tr>
@@ -247,7 +247,7 @@
             <td width="15%">
               <input type="number" id="link_major_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" maxlength="2"
                 oninput="maxLengthCheck(this)"> 학점<br>
-              <input type="checkbox" id="link_major_none" onclick="checkcont2()"> 해당없음
+              <input type="checkbox" id="link_major_none" onclick="checkcont('link_major_none', 'link_major_point', 'cross_point1')"> 해당없음
             </td>
             <th rowspan="3" width="10%">교차<br>인정</th>
             <td width="15%">
@@ -267,7 +267,7 @@
             <td>
               <input type="number" id="fusion_major_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" maxlength="2"
                 oninput="maxLengthCheck(this)"> 학점<br>
-              <input type="checkbox" id="fusion_major_none" onclick="checkcont3()"> 해당없음
+              <input type="checkbox" id="fusion_major_none" onclick="checkcont('fusion_major_none', 'fusion_major_point', 'cross_point2')"> 해당없음
             </td>
             <td>
               <input type="number" id="cross_point2" placeholder="0" name="" value="" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" max="15" maxlength="2" oninput="maxLengthCheck(this)"> 학점
@@ -279,7 +279,7 @@
             <td>
               <input type="number" id="plan_major_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" maxlength="2"
                 oninput="maxLengthCheck(this)"> 학점<br>
-              <input type="checkbox" id="plan_major_none" onclick="checkcont4()"> 해당없음
+              <input type="checkbox" id="plan_major_none" onclick="checkcont('plan_major_none', 'plan_major_point', 'cross_point3')"> 해당없음
             </td>
             <td>
               <input type="number" id="cross_point3" placeholder="0" name="" value="" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" max="6" maxlength="1" oninput="maxLengthCheck(this)"> 학점<br>
@@ -293,7 +293,7 @@
             <td colspan="3">
               <input type="number" id="minor_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" maxlength="2"
                 oninput="maxLengthCheck(this)"> 학점<br>
-              <input type="checkbox" id="minor_none" onclick="checkcont5()" checked> 해당없음
+              <input type="checkbox" id="minor_none" onclick="checkcont1('minor_none', 'minor_point')" checked> 해당없음
             </td>
             <td>부전공 전공 필수 6학점 이상 포함하여 수강</td>
           </tr>
@@ -313,7 +313,7 @@
             <td colspan="3">
               <input type="number" id="teaching_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' min="0" max="30" class="inputnumber" maxlength="2"
                 oninput="maxLengthCheck(this)"> 학점<br>
-              <input type="checkbox" id="teaching_none" onclick="checkcont6()" checked> 해당없음
+              <input type="checkbox" id="teaching_none" onclick="checkcont1('teaching_none', 'teaching_point')" checked> 해당없음
             </td>
             <td>이수기준 통과 여부는 교직팀에 문의할 것</td>
           </tr>

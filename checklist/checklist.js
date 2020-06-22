@@ -1,69 +1,23 @@
-function checkcont1() {
-  var none_checked = document.getElementById("double_major_none").checked;
+function checkcont1(none, point) {
+  var none_checked = document.getElementById(none).checked;
   if (!none_checked) {
-    document.getElementById("double_major_point").readOnly = false;
+    document.getElementById(point).readOnly = false;
   } else {
-    document.getElementById("double_major_point").value = null;
-    document.getElementById("double_major_point").readOnly = true;
+    document.getElementById(point).value = null;
+    document.getElementById(point).readOnly = true;
   }
 }
 
-function checkcont2() {
-  var none_checked = document.getElementById("link_major_none").checked;
+function checkcont(none, point, cross) {
+  var none_checked = document.getElementById(none).checked;
   if (!none_checked) {
-    document.getElementById("link_major_point").readOnly = false;
-    document.getElementById("cross_point1").readOnly = false;
+    document.getElementById(point).readOnly = false;
+    document.getElementById(cross).readOnly = false;
   } else {
-    document.getElementById("link_major_point").value = null;
-    document.getElementById("link_major_point").readOnly = true;
-    document.getElementById("cross_point1").value = null;
-    document.getElementById("cross_point1").readOnly = true;
-  }
-}
-
-function checkcont3() {
-  var none_checked = document.getElementById("fusion_major_none").checked;
-  if (!none_checked) {
-    document.getElementById("fusion_major_point").readOnly = false;
-    document.getElementById("cross_point2").readOnly = false;
-  } else {
-    document.getElementById("fusion_major_point").value = null;
-    document.getElementById("fusion_major_point").readOnly = true;
-    document.getElementById("cross_point2").value = null;
-    document.getElementById("cross_point2").readOnly = true;
-  }
-}
-
-function checkcont4() {
-  var none_checked = document.getElementById("plan_major_none").checked;
-  if (!none_checked) {
-    document.getElementById("plan_major_point").readOnly = false;
-    document.getElementById("cross_point3").readOnly = false;
-  } else {
-    document.getElementById("plan_major_point").value = null;
-    document.getElementById("plan_major_point").readOnly = true;
-    document.getElementById("cross_point3").value = null;
-    document.getElementById("cross_point3").readOnly = true;
-  }
-}
-
-function checkcont5() {
-  var none_checked = document.getElementById("minor_none").checked;
-  if (!none_checked) {
-    document.getElementById("minor_point").readOnly = false;
-  } else {
-    document.getElementById("minor_point").value = null;
-    document.getElementById("minor_point").readOnly = true;
-  }
-}
-
-function checkcont6() {
-  var none_checked = document.getElementById("teaching_none").checked;
-  if (!none_checked) {
-    document.getElementById("teaching_point").readOnly = false;
-  } else {
-    document.getElementById("teaching_point").value = null;
-    document.getElementById("teaching_point").readOnly = true;
+    document.getElementById(point).value = null;
+    document.getElementById(point).readOnly = true;
+    document.getElementById(cross).value = null;
+    document.getElementById(cross).readOnly = true;
   }
 }
 
