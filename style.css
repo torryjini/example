@@ -7,6 +7,10 @@ body {
   padding: 0;
 }
 
+header {
+  background-color: rgb(33, 85, 164);
+}
+
 th {
   background: #98c1fe85;
 }
@@ -115,10 +119,11 @@ select {
 }
 
 #sidebartab {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   position: absolute;
+  color: white;
   z-index: 3;
 }
 
@@ -138,6 +143,7 @@ select {
   padding-bottom: 0.7rem;
   border-bottom: solid 0.2rem;
   font-size: 2.7rem;
+  color: white;
   margin-top: 0;
   font-family: 'Poiret One', cursive;
 }
