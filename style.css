@@ -123,8 +123,7 @@ select {
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   position: absolute;
-  color: white;
-  background-color: rgb(33, 85, 164);
+  color: rgb(33, 85, 164);
   z-index: 3;
 }
 
