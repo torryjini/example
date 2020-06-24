@@ -9,42 +9,6 @@ function AccFunc(id) {
       x.previousElementSibling.className.replace("", "");
   }
 }
-//
-// function myAccFunc() {
-//   var x = document.getElementById("standard");
-//   if (x.className.indexOf("w3-show") == -1) {
-//     x.className += " w3-show";
-//     x.previousElementSibling.className += "";
-//   } else {
-//     x.className = x.className.replace(" w3-show", "");
-//     x.previousElementSibling.className =
-//       x.previousElementSibling.className.replace("", "");
-//   }
-// }
-//
-// function myAccFunc2() {
-//   var x = document.getElementById("etc");
-//   if (x.className.indexOf("w3-show") == -1) {
-//     x.className += " w3-show";
-//     x.previousElementSibling.className += "";
-//   } else {
-//     x.className = x.className.replace(" w3-show", "");
-//     x.previousElementSibling.className =
-//       x.previousElementSibling.className.replace("", "");
-//   }
-// }
-//
-// function myAccFunc3() {
-//   var x = document.getElementById("relsite");
-//   if (x.className.indexOf("w3-show") == -1) {
-//     x.className += " w3-show";
-//     x.previousElementSibling.className += "";
-//   } else {
-//     x.className = x.className.replace(" w3-show", "");
-//     x.previousElementSibling.className =
-//       x.previousElementSibling.className.replace("", "");
-//   }
-// }
 
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
