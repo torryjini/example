@@ -66,14 +66,14 @@
         <table border="solid" width="100%">
           <tr>
             <th colspan="2" width="8%">구분</th>
-            <th colspan="2" width="15%">최소 학점</th>
+            <th width="15%">최소 학점</th>
             <th width="12%">최대 학점</th>
             <th width="30%" colspan="2">이수 학점</th>
             <th width="35%">이수기준</th>
           </tr>
           <tr>
             <th colspan="2">선택</th>
-            <td colspan="2">0</td>
+            <td>0</td>
             <td></td>
             <td colspan="2">
               <input type="number" id="elective_liveral" placeholder="0" value="" onchange="Liveral_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' min="0" max="50" class="inputnumber" maxlength="2"
@@ -84,7 +84,7 @@
           <tr>
             <th rowspan="3">공통</th>
             <th>국어</th>
-            <td colspan="2">2</td>
+            <td>2</td>
             <td>2</td>
             <td colspan="2"><select class="checkselect" id="common_kor" onchange="Liveral_Sum();">
                 <option value="0">0</option>
@@ -94,7 +94,7 @@
           </tr>
           <tr>
             <th>영어</th>
-            <td colspan="2">2</td>
+            <td>2</td>
             <td>2</td>
             <td colspan="2"><select id="common_eng" class="checkselect" onchange="Liveral_Sum();">
                 <option value="0">0</option>
@@ -105,7 +105,7 @@
           </tr>
           <tr>
             <th>기타</th>
-            <td colspan="2">10</td>
+            <td>10</td>
             <td>10</td>
             <td colspan="2"><select id="common_etc" class="checkselect" onchange="Liveral_Sum();">
                 <option value="0">0</option>
@@ -120,12 +120,10 @@
               <br>회계학원론(회계원리) 이수 시<br>"회계와사회" 면제</td>
           </tr>
           <tr>
-            <th rowspan="5">핵심</th>
-            <th>도전</th>
-            <td>2~3</td>
+            <th rowspan="5" colspan="2">핵심</th>
             <td rowspan="5">15</td>
             <td rowspan="5"></td>
-            <td width="13%"><input type="checkbox" id="core1"> 이수</td>
+            <td width="13%"><input type="checkbox" id="core1"> 도전_이수</td>
             <td width="17%" rowspan="5">
               <input type="number" id="core_total" placeholder="0" value="" onchange="Liveral_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' class="inputnumber" min="0" max="50" maxlength="2"
                 oninput="maxLengthCheck(this)"> 학점
@@ -133,28 +131,20 @@
             <td rowspan="5">각 영역당<br>1과목 이상 필수 이수</td>
           </tr>
           <tr>
-            <th>창의</th>
-            <td>2~3</td>
-            <td><input type="checkbox" id="core2"> 이수</td>
+            <td><input type="checkbox" id="core2"> 창의_이수</td>
           </tr>
           <tr>
-            <th>융합</th>
-            <td>2~3</td>
-            <td><input type="checkbox" id="core3"> 이수</td>
+            <td><input type="checkbox" id="core3"> 융합_이수</td>
           </tr>
           <tr>
-            <th>신뢰</th>
-            <td>2~3</td>
-            <td><input type="checkbox" id="core4"> 이수</td>
+            <td><input type="checkbox" id="core4"> 신뢰_이수</td>
           </tr>
           <tr>
-            <th>소통</th>
-            <td>2~3</td>
-            <td><input type="checkbox" id="core5"> 이수</td>
+            <td><input type="checkbox" id="core5"> 소통_이수</td>
           </tr>
           <tr>
             <th colspan="2">합계</th>
-            <td colspan="2">29</td>
+            <td>29</td>
             <td>45</td>
             <td colspan="2">
               <input type="text" id="liveral_total" value="0" class="totalnumber" onchange="total_point_sum()" readonly> 학점
