@@ -282,7 +282,7 @@
             <td>21</td>
             <td colspan="3">
               <input type="number" id="minor_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" maxlength="2"
-                oninput="maxLengthCheck(this)"> 학점<br>
+                oninput="maxLengthCheck(this)" readonly> 학점<br>
               <input type="checkbox" id="minor_none" onclick="checkcont1('minor_none', 'minor_point')" checked> 해당없음
             </td>
             <td>부전공 전공 필수 6학점 이상 포함하여 수강</td>
@@ -302,7 +302,7 @@
             <td>22</td>
             <td colspan="3">
               <input type="number" id="teaching_point" placeholder="0" name="" value="" onchange="total_point_sum()" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' min="0" max="30" class="inputnumber" maxlength="2"
-                oninput="maxLengthCheck(this)"> 학점<br>
+                oninput="maxLengthCheck(this)" readonly> 학점<br>
               <input type="checkbox" id="teaching_none" onclick="checkcont1('teaching_none', 'teaching_point')" checked> 해당없음
             </td>
             <td>이수기준 통과 여부는 교직팀에 문의할 것</td>
