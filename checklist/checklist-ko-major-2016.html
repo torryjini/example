@@ -76,7 +76,7 @@
             <td>0</td>
             <td></td>
             <td colspan="2">
-              <input type="number" id="elective_liveral" placeholder="0" value="" onchange="Liveral_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' min="0" max="50" class="inputnumber" maxlength="2"
+              <input type="number" id="elective_liberal" placeholder="0" value="" onchange="Liberal_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liberal_Sum();' min="0" max="50" class="inputnumber" maxlength="2"
                 oninput="maxLengthCheck(this)"> 학점
             </td>
             <td>자율이수</td>
@@ -86,7 +86,7 @@
             <th>국어</th>
             <td>2</td>
             <td>2</td>
-            <td colspan="2"><select class="checkselect" id="common_kor" onchange="Liveral_Sum();">
+            <td colspan="2"><select class="checkselect" id="common_kor" onchange="Liberal_Sum();">
                 <option value="0">0</option>
                 <option value="2">2</option>
               </select> 학점</td>
@@ -96,7 +96,7 @@
             <th>영어</th>
             <td>2</td>
             <td>2</td>
-            <td colspan="2"><select id="common_eng" class="checkselect" onchange="Liveral_Sum();">
+            <td colspan="2"><select id="common_eng" class="checkselect" onchange="Liberal_Sum();">
                 <option value="0">0</option>
                 <option value="2">2</option>
                 <option value="0.5">면제</option>
@@ -107,7 +107,7 @@
             <th>기타</th>
             <td>10</td>
             <td>10</td>
-            <td colspan="2"><select id="common_etc" class="checkselect" onchange="Liveral_Sum();">
+            <td colspan="2"><select id="common_etc" class="checkselect" onchange="Liberal_Sum();">
                 <option value="0">0</option>
                 <option value="2">2</option>
                 <option value="4">4</option>
@@ -125,7 +125,7 @@
             <td rowspan="5"></td>
             <td width="13%"><input type="checkbox" id="core1"> 도전_이수</td>
             <td width="17%" rowspan="5">
-              <input type="number" id="core_total" placeholder="0" value="" onchange="Liveral_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liveral_Sum();' class="inputnumber" min="0" max="50" maxlength="2"
+              <input type="number" id="core_total" placeholder="0" value="" onchange="Liberal_Sum();" onkeydown='return onlyNumber(event);' onkeyup='removeChar(event);Liberal_Sum();' class="inputnumber" min="0" max="50" maxlength="2"
                 oninput="maxLengthCheck(this)"> 학점
             </td>
             <td rowspan="5">각 영역당<br>1과목 이상 필수 이수</td>
@@ -147,7 +147,7 @@
             <td>29</td>
             <td>45</td>
             <td colspan="2">
-              <input type="text" id="liveral_total" value="0" class="totalnumber" onchange="total_point_sum()" readonly> 학점
+              <input type="text" id="liberal_total" value="0" class="totalnumber" onchange="total_point_sum()" readonly> 학점
             </td>
             <td>45 학점 초과 시<br>졸업 학점에서 감산</td>
           </tr>
@@ -155,7 +155,7 @@
       </form>
     </div><br>
     <div class="buttons">
-      <input type="button" value="결과확인" onclick="Liveral_result();">
+      <input type="button" value="결과확인" onclick="Liberal_result();">
       <input type="reset" value="초기화" onclick="Form_Reset('checklist_liberal')">
     </div>
     <br>
@@ -385,7 +385,7 @@
     <script>
       /**
        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/unibersalcode/#configuration-variables*/
       /*
       var disqus_config = function () {
       this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable

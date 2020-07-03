@@ -37,33 +37,33 @@ function maxLengthCheck(object) {
   }
 }
 
-function Liveral_Sum() {
-  var elective_point = Number(document.getElementById("elective_liveral").value);
+function Liberal_Sum() {
+  var elective_point = Number(document.getElementById("elective_liberal").value);
   var common_kor_point = Number(document.getElementById("common_kor").value);
   var common_eng_point = Math.floor(Number(document.getElementById("common_eng").value));
   var common_etc_point = Number(document.getElementById("common_etc").value);
   var core_total_point = Number(document.getElementById("core_total").value);
   if (elective_point + common_kor_point + common_eng_point + common_etc_point + core_total_point > 45) {
-    document.getElementById("liveral_total").value = 45;
+    document.getElementById("liberal_total").value = 45;
   } else {
-    document.getElementById("liveral_total").value = elective_point + common_kor_point + common_eng_point + common_etc_point + core_total_point;
+    document.getElementById("liberal_total").value = elective_point + common_kor_point + common_eng_point + common_etc_point + core_total_point;
   }
 }
 
-function Liveral_result() {
+function Liberal_result() {
   var Admissionyear = document.getElementById("admissionyear_selector").value;
   if (Admissionyear < 2016) {
     alert("입학년도를 선택하세요!");
     return false;
   } else {
-    Liveral_cal();
+    Liberal_cal();
   }
 }
 
-function Liveral_cal() {
+function Liberal_cal() {
   var Admissionyear = document.getElementById("admissionyear_selector");
   var Admissionyear_text = Admissionyear.options[Admissionyear.selectedIndex].text;
-  var elective_point = Number(document.getElementById("elective_liveral").value);
+  var elective_point = Number(document.getElementById("elective_liberal").value);
   var common_kor_point = Number(document.getElementById("common_kor").value);
   var common_eng_point = Number(document.getElementById("common_eng").value);
   var common_etc_point = Number(document.getElementById("common_etc").value);
@@ -74,7 +74,7 @@ function Liveral_cal() {
   var Core4 = document.getElementById("core4").checked;
   var Core5 = document.getElementById("core5").checked;
   var core_total_point = Number(document.getElementById("core_total").value);
-  var liveral_total_point = Number(document.getElementById("liveral_total").value);
+  var liberal_total_point = Number(document.getElementById("liberal_total").value);
   var word = "입학년도 : " + Admissionyear_text + "\n선택교양 : " + elective_point + " 학점\n";
 
   if (core_total_point > 0 && !Core1 && !Core2 && !Core3 && !Core4 && !Core5) {
@@ -132,10 +132,10 @@ function Liveral_cal() {
     word += "소통"
   }
 
-  if (liveral_total_point <= 45) {
-    word += "\n교양영역 계 : " + liveral_total_point + " 학점"
+  if (liberal_total_point <= 45) {
+    word += "\n교양영역 계 : " + liberal_total_point + " 학점"
   } else {
-    word += "\n교양영역 계 : " + liveral_total_point + " 학점_ " + [liveral_total_point - 45] + "학점 초과"
+    word += "\n교양영역 계 : " + liberal_total_point + " 학점_ " + [liberal_total_point - 45] + "학점 초과"
   }
 
   alert(word)
@@ -393,7 +393,7 @@ function BaseNeceresult(Majorstandard) {
 }
 
 function total_point_sum() {
-  var LiveralTotal = Number(document.getElementById("liveral_total").value);
+  var LiberalTotal = Number(document.getElementById("liberal_total").value);
   var Basepoint = Number(document.getElementById("base_selector").value);
   var Majorpoint = Number(document.getElementById("major_input").value);
   var Doublepoint = Number(document.getElementById("double_major_point").value);
@@ -403,7 +403,7 @@ function total_point_sum() {
   var Minorpoint = Number(document.getElementById("minor_point").value);
   var Freepoint = Number(document.getElementById("free_point").value);
   var Teachpoint = Number(document.getElementById("teaching_point").value);
-  document.getElementById("the_total").value = LiveralTotal + Basepoint + Majorpoint + Doublepoint + Linkpoint + Fusionpoint + Planpoint + Minorpoint + Freepoint + Teachpoint;
+  document.getElementById("the_total").value = LiberalTotal + Basepoint + Majorpoint + Doublepoint + Linkpoint + Fusionpoint + Planpoint + Minorpoint + Freepoint + Teachpoint;
 }
 
 function Etc_result() {
