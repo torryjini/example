@@ -155,8 +155,8 @@
       </form>
     </div><br>
     <div class="buttons">
-      <input type="button" value="결과확인" onclick="Liberal_result();">
       <input type="reset" value="초기화" onclick="Form_Reset('checklist_liberal')">
+      <input type="button" value="결과확인" onclick="Liberal_result();">
     </div>
     <br>
     <div id="major">
@@ -244,7 +244,7 @@
               <input type="number" id="cross_point1" placeholder="0" name="" value="" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' class="inputnumber" min="0" max="12" maxlength="2" oninput="maxLengthCheck(this)"> 학점
               <br>(최대 : 12)
             </td>
-            <td rowspan="2">수강 및 학사안내 연계/융합전공
+            <td rowspan="2">연계/융합전공
               <br>교과과정표와 대조하여 확인
               <br>융합전공 별로 최소학점이 36 또는 45 학점이며<br>교차인정 학점도 상이하므로 확인 필수</td>
           </tr>
@@ -320,8 +320,8 @@
     </div>
     <br>
     <div class="buttons">
-      <input type="button" value="결과확인" onclick="Major_result();">
       <input type="reset" value="초기화" onclick="Form_Reset('checklist_major')">
+      <input type="button" value="결과확인" onclick="Major_result();">
     </div><br>
 
     <div id="etc" class="checklist">
@@ -371,13 +371,13 @@
           <tr>
             <th colspan="2">전 학년 평점</th>
             <td><input type="number" placeholder="0" id="average" value="" max="4.5" min="0" step=".01" class="inputnumber" maxlength="4" oninput="maxLengthCheck(this)"> / 4.5</td>
-            <td>금학기 보관성적 이관 후<br>최종 평점 2.0 미만인 자 졸업 불가</td>
+            <td>금학기 보관성적 이관 후<br>최종 평점 2.0 미만 졸업 불가</td>
           </tr>
         </table>
       </form><br>
       <div class="buttons">
-        <input type="button" value="결과확인" onclick="Etc_result()">
         <input type="reset" value="초기화" onclick="Form_Reset('checklist_etc')">
+        <input type="button" value="결과확인" onclick="Etc_result()">
       </div>
       <br>
     </div>
